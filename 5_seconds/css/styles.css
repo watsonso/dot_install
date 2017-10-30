@@ -14,6 +14,15 @@
   line-height: 60px;
 }
 
+#result.standby {
+  opacity: 0.5;
+}
+
+#result.perfect {
+  background: #FA5858;
+  color: #fff;
+}
+
 #start {
   float: left;
 } 
@@ -29,5 +38,10 @@
   background: #eee;
   height: 40px;
   line-height: 40px;
+  box-shadow: 0 6px 0 #ccc;
+}
+
+#start.pushed, #stop.puhsed {
+  margin-top: 3px;
   box-shadow: 0 6px 0 #ccc;
 }
