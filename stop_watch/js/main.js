@@ -9,6 +9,13 @@
   var startTime;
   var elapsedTime = 0;
 
+  function updateTimerText() {
+    var m = Math.floor(elapsedTime / 60000);
+    var s = Math.floor(elapsedTime % 60000 / 1000);
+    var ms = elapsedTime % 1000;
+    timer.textContent = m + ':' + s + '.' + ms;
+  }
+
   function countUp() {
     setTimeout(function() {
       elapsedTime = Date.now() - startTime;
