@@ -18,10 +18,13 @@
     var m = d.getMinutes();
     var s = d.getSeconds();
     var ms = d.getMilliseconds();
+    var timerString;
     m = ('0' + m).slice(-2);
     s = ('0' + s).slice(-2);
-    ms= ('00' + ms).slice(-3);
-    timer.textContent = m + ':' + s + '.' + ms;
+    ms = ('00' + ms).slice(-3);
+    timerString = m + ':' + s + '.' + ms; 
+    timer.textContent = timerString;
+    document.title = timerString;
   }
 
   function countDown() {
@@ -56,12 +59,24 @@
   });
 
   min.addEventListener('click', function() {
+    if (isRunning === true) {
+      return;
+    }
     timeToCountDown += 60 * 1000;
+    if (timeToCountDown >= 60 * 60 * 1000) {
+      timeToCountDown = 0;
+    } 
     updateTimer(timeToCountDown);
   });
 
   sec.addEventListener('click', function() {
+    if (isRunning === true) {
+      return;
+    }
     timeToCountDown += 1000;
+    if (timeToCountDown >= 60 * 60 * 1000) {
+      timeToCountDown = 0;
+    } 
     updateTimer(timeToCountDown);
   });
 
