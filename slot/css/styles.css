@@ -1,4 +1,4 @@
-body {
+bpairs-fs issues/6450ody {
   background: #bdc3c7;
   font-size: 16px;
   font-weight: bold;
@@ -34,4 +34,24 @@ body {
   background: #ef454a;
   box-shadow: 0 3px 0 #d1483e;
   border-radius: 20px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  user-select: none;
+}
+
+#spin {
+  cursor: pointer;
+  width: 280px;
+  height: 35px;
+  background: #3498db;
+  box-shadow: 0 3px 0 #2880b9;
+  border-radius: 20px;
+  line-height: 35px;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  user-select: none;
+  margin: 0 auto;
 }
