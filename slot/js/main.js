@@ -3,6 +3,7 @@
 
   var panels = document.getElementsByClassName('panel');
   var spin = document.getElementById('spin');
+  var stop = document.getElementsByClassName('stop');
 
   var cards = [
     'seven.png',
@@ -15,11 +16,11 @@
   var stopCount = 0;
 
   function runSlot(n) {
-    timers[n] = setInterval(function() {
+    timers[n] = etInterval(function() {
       panels[n].children[0].src =
         'img/' +
         cards[Math.floor(Math.random() * cards.length)];
-        //runSlot(n);
+        runSlot(n);
     }, 50);
   }
 
@@ -39,5 +40,10 @@
     for (i = 0; i < panels.length; i++) {
       runSlot(i);
     }
+  });
+
+  stop.addEventListener('click', function() {
+    stopCount++;
+    console.log(stopCount);
   });
 })();
