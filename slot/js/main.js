@@ -16,7 +16,7 @@
   var stopCount = 0;
 
   function runSlot(n) {
-    timers[n] = etInterval(function() {
+    timers[n] = setInterval(function() {
       panels[n].children[0].src =
         'img/' +
         cards[Math.floor(Math.random() * cards.length)];
