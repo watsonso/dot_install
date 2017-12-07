@@ -25,6 +25,7 @@ body {
   border-radius: 5px;
   position: absolute;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 #card-front {
@@ -37,8 +38,12 @@ body {
   transform: rotateY(180deg);
 }
 
+.open {
+  transform: rotateY(180deg);
+}
+
 #btn {
-  width: 280px;
+  width: 180px;
   background: #00aaff;
   margin: 0 auto;
   padding: 7px;
