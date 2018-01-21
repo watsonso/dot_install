@@ -9,10 +9,10 @@
 <body>
   <h1>AngularJSの練習</h1>
   <div ng-controller="mainCtrl">
-    <p>{{users.length}} users.</p>
     <ul>
-      <li ng-repeat="user in users">
+      <li ng-repeat="user in users" ng-controller="userItemCtrl">
       {{user.name}} {{user.score}}
+      <button ng-click="increment()">+1</button>
       </li>
     </ul>
   </div>
